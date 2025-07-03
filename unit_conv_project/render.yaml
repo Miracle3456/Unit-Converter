@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: unit-converter
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn unit_conv_project.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: unit_conv_project.settings
+      - key: PYTHON_VERSION
+        value: 3.11
+    staticPublishPath: staticfiles
