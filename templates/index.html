@@ -1,0 +1,40 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit-Converter</title>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="1st-child">
+                Unit-Converter
+            </h1>
+        <form action="" method="post">
+        {%csrf_token%}
+            <select name="options" id="id_options">
+                {%for value , label in form.options.field.choices%}
+                <option value="{{value}}" {%if form.options.value == value%}selected{%endif%}>{{label}}</option>
+                {%endfor%}
+            </select>    
+
+            <input type="text" value="{{value.number.value|default:''}}" placeholder="Enter Number" name = "number">
+            <button type="submit">Convert</button>            
+        </form>
+        
+        <div class="results">
+            {%if result%}
+            <p>{{result}}</p>
+            {%endif%}
+        </div>
+        
+    </div>
+
+    <script>
+
+
+    </script>
+</body>
+</html>

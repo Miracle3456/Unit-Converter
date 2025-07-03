@@ -1,0 +1,51 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    width: 200px auto;
+    box-shadow: 0 4px 8px rgba(0, 0 0, 0.2);
+}
+
+input , select{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 10px 0 0 0;
+    margin-bottom: 10px;
+    align-items: center;
+    width: 200px;
+    transition: transform 0.3s ease-in;
+
+}
+
+select{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid;
+    align-items: center;
+    display: block;
+    transition: transform 0.3s ease-in;
+    margin-bottom: 10px;
+}
+
+body{
+    background-color: midnightblue;
+    color: aliceblue;
+
+}
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+input,select,button:hover{
+    transform: scale(1.08);
+}
